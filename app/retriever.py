@@ -10,8 +10,8 @@ def get_retriever() -> VectorStoreRetriever:
     retriever = vectorstore.as_retriever(
         search_type="mmr",
         search_kwargs={
-            "k": 4,
-            "fetch_k": 12,
+            "k": 10, #update for rerankder
+            "fetch_k": 20, #update for reranker
             "lambda_mult": 0.7,
         },
     )
