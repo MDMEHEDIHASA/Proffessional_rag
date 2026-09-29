@@ -105,6 +105,33 @@ uv add python-dotenv
 OPENAI_API_KEY=your_api_key_here
 
 
+### For my understanding
+                    Question
+                       │
+          ┌────────────┴────────────┐
+          ↓                         ↓
+   Vector Search                 BM25
+          │                         │
+          ↓                         ↓
+   20 candidates              20 candidates
+          │                         │
+          └────────────┬────────────┘
+                       ↓
+                Hybrid Fusion
+                       ↓
+                 20 candidates
+                       ↓
+                     MMR
+                       ↓
+                  10 candidates
+                       ↓
+                  Reranker
+                       ↓
+                   Top 4
+                       ↓
+                     LLM
+
+
 
 ###  Ulimate goal learning
 ```
