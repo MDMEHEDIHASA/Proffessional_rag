@@ -50,7 +50,8 @@
 
 
 
-## 1. Project structure
+### 1. Project structure
+```
 professional-rag/
 │
 ├── app/
@@ -74,6 +75,7 @@ professional-rag/
 ├── .gitignore
 ├── pyproject.toml
 └── README.md
+```
 
 ## 2. Environment setup
 mkdir professional-rag
