@@ -7,3 +7,4 @@ faiss-cpu
 pypdf
 python-dotenv
 rank_bm25
+sentence-transformers #if you have problem to install it try to use uv add sentence-transformers
