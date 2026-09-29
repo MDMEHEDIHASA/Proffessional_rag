@@ -6,7 +6,7 @@ from langchain_core.runnables import RunnablePassthrough
 
 from .prompts import RAG_PROMPT
 from .retriever import get_retriever
-
+from .hybrid_retriever import create_hybrid_retriever
 
 def format_documents(
     documents: list[Document],
@@ -38,9 +38,11 @@ Page: {page}
     return "\n\n---\n\n".join(formatted)
 
 
-def create_rag_chain():
+def create_rag_chain(chunks):
 
-    retriever = get_retriever()
+    #retriever = get_retriever() //comment out for using hybrid retriever
+    # Usse Hybrid Retriever
+    retriever = create_hybrid_retriever(chunks)
 
     llm = ChatOpenAI(
         model="gpt-4o-mini",

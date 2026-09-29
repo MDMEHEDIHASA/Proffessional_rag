@@ -37,11 +37,12 @@ def build_knowledge_base():
     )
 
     print("Vector store created!")
+    return chunks;
 
 
-def ask_question():
-
-    rag_chain = create_rag_chain()
+def ask_question(chunks):
+    
+    rag_chain = create_rag_chain(chunks)
 
     while True:
 
@@ -63,6 +64,6 @@ def ask_question():
 
 if __name__ == "__main__":
 
-    build_knowledge_base()
+    chunks = build_knowledge_base() #update for hybrid retreiver
 
-    ask_question()
+    ask_question(chunks) #updat for hybrid retriever
